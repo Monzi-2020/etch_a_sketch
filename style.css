@@ -1,5 +1,10 @@
 #container {
     display: flex;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    max-width: 40%;
+    
 }
 
 .madimi-one-regular {
@@ -8,3 +13,13 @@
     font-style: normal;
   }
   
+div.grid {
+    background-color: aqua;
+}
+
+div.grid-item {
+    background-color: pink;
+    padding: 10px;
+    border-style: solid;
+    border-color: black;
+}
