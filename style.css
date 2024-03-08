@@ -3,7 +3,9 @@
     border-style: solid;
     border-color: black;
     border-width: 2px;
-    max-width: 40%;
+    flex-wrap: wrap;
+    width: 480px;
+    height: 480px;
     
 }
 
@@ -17,9 +19,12 @@ div.grid {
     background-color: aqua;
 }
 
-div.grid-item {
-    background-color: pink;
-    padding: 10px;
+.grid-item {
+    background-color: white;
     border-style: solid;
     border-color: black;
+    border-width: 1px;
+    flex: auto;
+    width: 30px;
+    box-sizing: border-box;
 }
