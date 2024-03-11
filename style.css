@@ -9,8 +9,8 @@ body {
     border-color: black;
     border-width: 2px;
     flex-wrap: wrap;
-    width: 480px;
-    height: 480px;
+    width: 960px;
+    height: 960px;
     
 }
 
@@ -32,4 +32,8 @@ div.grid {
     flex: auto;
     width: 30px;
     box-sizing: border-box;
+}
+
+.grid-item.hover {
+    background-color: darkslategrey;
 }
