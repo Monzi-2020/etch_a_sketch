@@ -1,10 +1,17 @@
 const gridBtns = document.querySelectorAll('.gridBtn');
-const gridContainer = document.getElementById('container');
+const gridContainer = document.querySelector('#container');
+const gridChange = document.querySelector('#gridChange');
 
 window.onload = function() {
     makeGrid(16,16);
-
 }
+
+gridChange.addEventListener('click', () => {
+    const num = prompt("What number of grid squres you want? You can type between 1-100", 16);
+    const gridItems = document.querySelectorAll('.grid-item');
+    gridItems.forEach((item) => item.remove());
+    makeGrid(num,num);
+})
 
 function makeGrid(rows, columns) {
     for(let i= 0; i < rows; i++) {
@@ -19,14 +26,5 @@ function makeGrid(rows, columns) {
         })
     }
 };}
-
-gridBtns.forEach((gridBtn) => {
-gridBtn.addEventListener('click',() => {
-        gridContainer.removeChild(gridItem);
-        const lows = gridBtn.id;
-        const columns = gridBtn.id;
-        makeGrid(lows, columns);
-    })
-})
 
 

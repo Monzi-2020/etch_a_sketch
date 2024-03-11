@@ -37,3 +37,13 @@ div.grid {
 .grid-item.hover {
     background-color: darkslategrey;
 }
+
+button#gridChange {
+    padding: 10px;
+    margin: 30px;
+    background-color: lightskyblue;
+    border-style: none;
+    border-radius: 8%;
+    font-family: "Madimi One", sans-serif; ;
+    font-size: 30px;
+}
