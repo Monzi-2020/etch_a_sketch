@@ -10,7 +10,7 @@ window.onload = function() {
 
 gridRange.addEventListener('input', () => {
     let num = gridRange.value;
-    rangeValue.textContent = `Grid squre: ${num}x${num}`
+    rangeValue.textContent = `${num}x${num}`
     const gridItems = document.querySelectorAll('.grid-item');
     gridItems.forEach((item) => item.remove());
     makeGrid(num,num);

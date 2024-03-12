@@ -74,12 +74,25 @@ button{
 }
 
 #chageGrid {
+    
     display: flex;
     flex-direction: column;
-    width: 170px;
+    width: 250px;
+    background: #273f3d;
     justify-content: end;
+    border-style: dotted;
+    border-color: azure;
+    padding: 10px 20px;
+    margin-top: 20px;
+
 }
 
+.font {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Tomorrow", sans-serif;
+    color:azure;
+}
 .roundButton {
     padding:30px;
     border-radius: 50%;
