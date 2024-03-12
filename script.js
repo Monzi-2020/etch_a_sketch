@@ -1,7 +1,6 @@
 const gridBtns = document.querySelectorAll('.gridBtn');
 const gridContainer = document.querySelector('#container');
 const gridChange = document.querySelector('#gridChange');
-const eraser = document.querySelector('#eraser');
 
 window.onload = function() {
     makeGrid(16,16);

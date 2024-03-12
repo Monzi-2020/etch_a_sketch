@@ -7,12 +7,22 @@
     <link rel="stylesheet" href="style.css"></link>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Honk&family=Tomorrow:wght@100;400&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <button id="gridChange">Change Grid</button>
-    <div class="grid" id="container">
+    <div id="etchCase">
+        <h1 class="honk">Etch-a-Sketch</h1>
+        <div id="container"></div>
+        <div id="buttonContainer">
+            <div class="roundButton"></div>
+            <button id="gridChange">Change Grid</button>
+            <button id="clear">Clear</button>
+            <button id="eraser">Eraser</button>
+            <button id="colorMode">Color: rainbow</button>
+            <input type="color" id="selectColor" value="black">
+            <div class="roundButton"></div>
+        </div>
     </div>
     
 </body>
