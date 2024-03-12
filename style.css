@@ -52,10 +52,15 @@ h1.honk {
     flex: auto;
     width: 30px;
     box-sizing: border-box;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
 }
 
 #buttonContainer{
     display:flex;
+    justify-content: space-between;
+    width: 1350px;
 }
 
 button{
@@ -68,6 +73,13 @@ button{
     background-color: rgb(252, 193, 85);
 }
 
+#chageGrid {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    justify-content: end;
+}
+
 .roundButton {
     padding:30px;
     border-radius: 50%;
@@ -78,7 +90,4 @@ button{
     width:60px;
     height:60px;
 
-}
-#gridChange {
-    background-color: lightskyblue;
 }

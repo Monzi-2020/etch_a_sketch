@@ -1,13 +1,16 @@
 const gridBtns = document.querySelectorAll('.gridBtn');
 const gridContainer = document.querySelector('#container');
-const gridChange = document.querySelector('#gridChange');
+const changeGrid = document.querySelector('#changeGrid');
+const gridRange = document.querySelector('#gridRange')
+const rangeValue = document.querySelector('#rangeValue')
 
 window.onload = function() {
     makeGrid(16,16);
 }
 
-gridChange.addEventListener('click', () => {
-    const num = prompt("What number of grid squres you want? You can type between 1-100", 16);
+gridRange.addEventListener('input', () => {
+    let num = gridRange.value;
+    rangeValue.textContent = `Grid squre: ${num}x${num}`
     const gridItems = document.querySelectorAll('.grid-item');
     gridItems.forEach((item) => item.remove());
     makeGrid(num,num);
