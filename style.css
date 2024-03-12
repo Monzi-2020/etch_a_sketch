@@ -50,7 +50,6 @@ h1.honk {
 .grid-item {
     background-color: white;
     flex: auto;
-    width: 30px;
     box-sizing: border-box;
     border-color: black;
     border-style: solid;
@@ -71,6 +70,10 @@ button{
     font-family: "Tomorrow", sans-serif;
     font-size: 30px;
     background-color: rgb(252, 193, 85);
+}
+
+.hover{
+    background-color: rgb(255, 172, 19);
 }
 
 #chageGrid {
@@ -103,4 +106,17 @@ button{
     width:60px;
     height:60px;
 
+}
+
+footer{
+    background-color: hotpink;
+    color:azure;
+    font-family: "Tomorrow", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%
 }
