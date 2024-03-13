@@ -65,11 +65,13 @@ h1.honk {
 button{
     padding: 10px 15px;
     margin: 30px;
-    border-style: none;
+    border-width: 5px;
+    border-color: black;
+    width: 130px;
     border-radius: 15px;
     font-family: "Tomorrow", sans-serif;
     font-size: 30px;
-    background-color: rgb(252, 193, 85);
+    background-color: rgb(255 202 0);
 }
 
 .hover{
@@ -77,8 +79,19 @@ button{
 }
 
 
-.grid-item.black{
+#colorMode.black{
     background-color: black;
+    color: white;
+}
+
+#colorMode.rainbow{
+    background-image: linear-gradient(to bottom, red,orange,yellow,green,blue,indigo,violet);
+    color:black;
+}
+
+#colorMode.hover{
+    background-image: linear-gradient(to bottom, rgb(135, 0, 0),rgb(131, 86, 2),rgb(134, 134, 1),rgb(1, 73, 1),rgb(3, 3, 130),rgb(45, 1, 77),rgb(138, 78, 138));
+    color:white;
 }
 
 #chageGrid {

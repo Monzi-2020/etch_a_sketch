@@ -6,6 +6,7 @@ const rangeValue = document.querySelector('#rangeValue')
 const clear = document.querySelector('#clear');
 const eraser = document.querySelector('#eraser');
 const colorMode = document.querySelector('#colorMode');
+colorMode.classList = "black"
 let num = gridRange.value;
 
 
@@ -17,19 +18,30 @@ gridRange.addEventListener('input', () => {
     makeGrid(num,num);
 })
 
+colorMode.addEventListener('click', () => {
+    const gridItems = document.querySelectorAll('.grid-item');
+    if(colorMode.className === "black hover") {
+        colorMode.classList.replace("black", "rainbow")
+        gridItems.forEach((item) =>
+        item.addEventListener('mouseover', ()=>{
+        let rgb = randomRgb();
+        item.setAttribute('style', `width: ${960/num}px; background: rgb(${rgb});`)
+        }))
+    }
+    else if(colorMode.className === "rainbow hover"){
+        colorMode.classList.replace("rainbow", "black");
+        gridItems.forEach((item) =>
+        item.addEventListener('mouseover', () => {
+            item.setAttribute('style', `width: ${960/num}px; 
+            background: black;`);}))
+    }
+})
 
 clear.addEventListener('click', () => {
     const gridItems = document.querySelectorAll('.grid-item');
     gridItems.forEach((item) => item.setAttribute('style', `width: ${960/num}px; background: white;`));
 });
 
-colorMode.addEventListener('click', () => {
-    const gridItems = document.querySelectorAll('.grid-item');
-    gridItems.forEach((item) =>
-    item.addEventListener('mouseover', ()=>{
-    item.setAttribute('style', `width: ${960/num}px; background: black;`)
-    }))
-})
 
 eraser.addEventListener('click', () => {
     const gridItems = document.querySelectorAll('.grid-item');
@@ -40,27 +52,7 @@ eraser.addEventListener('click', () => {
 })
    
 
-// function changeMode() {
-//     if(eraser.className === "eraser") {
-//         eraser.classList.add("drawing")
-//         eraser.textContent = "Drawing";
-//         const gridItem = document.querySelector('.grid-item')
-//         gridItem.addEventListener('mouseover', () => {
-//         gridItem.setAttribute('style', `width: ${960/num}px; 
-//             background: black;)`)
-//         });
-//     }
-//     else {
-//         eraser.classList.add("eraser");
-//         eraser.textContent = "Eraser";
-//         const gridItem = document.querySelector('.grid-item')
-//         gridItem.addEventListener('mouseover', () => {
-//         gridItem.setAttribute('style', `width: ${960/num}px; 
-//             background: white;)`)
-//         });
-//     }
 
-// }
 
 function makeGrid(rows, columns) {
     for(let i= 0; i < rows; i++) {
@@ -73,7 +65,7 @@ function makeGrid(rows, columns) {
         gridItem.addEventListener('mouseover', () => {
         let rgb = randomRgb()
         gridItem.setAttribute('style', `width: ${960/rows}px; 
-        background: rgb(${rgb});`);})
+        background: black;`);})
 
 
     }};
@@ -109,4 +101,12 @@ eraser.addEventListener('mouseover', () => {
 
 eraser.addEventListener('mouseout', () => {
     eraser.classList.remove("hover");
+})
+
+colorMode.addEventListener('mouseover', () => {
+    colorMode.classList.add("hover");
+})
+
+colorMode.addEventListener('mouseout', () => {
+    colorMode.classList.remove("hover");
 })
