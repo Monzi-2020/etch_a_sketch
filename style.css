@@ -76,6 +76,11 @@ button{
     background-color: rgb(255, 172, 19);
 }
 
+
+.grid-item.black{
+    background-color: black;
+}
+
 #chageGrid {
     
     display: flex;
